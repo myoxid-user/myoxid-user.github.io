@@ -30,6 +30,11 @@
             font-family: "Arial", sans-serif;
             -webkit-tap-highlight-color: transparent;
             touch-action: manipulation;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%23e74c3c"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') 12 12, auto;
+        }
+
+        button, a {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%2327ae60"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') 12 12, pointer;
         }
 
         #hearts-bg {
@@ -188,6 +193,20 @@
 
         .yes-btn:active {
             box-shadow: 0 0 0 #219150;
+        }
+
+        .telegram-btn {
+            background-color: #229ED9;
+            box-shadow: 0 4px 0 #1b7db3;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .telegram-btn:hover {
+            background-color: #2bc4ff;
         }
 
         @keyframes shakeBtn {
@@ -359,6 +378,10 @@
         <h1 class="bounce-in">Yaaaay! &#x1F389;&#x2764;&#xFE0F;</h1>
         <p style="font-size: 1.2rem; font-weight: bold;">I knew it! Happy Valentine's Day! &#x1F618;</p>
         <img class="success-image" src="kiss.jpg" alt="Love" loading="lazy" />
+        <br>
+        <a href="https://t.me/dibbed?text=you're%20my%20valentine❤️❤️❤️❤️" target="_blank" class="btn telegram-btn">
+            Send "YES" to Telegram &#x2708;&#xFE0F;
+        </a>
     </div>
 
     <div id="cat-container" class="container fade-slide-up" style="display: none">
@@ -573,7 +596,8 @@
                 const viewportH = window.innerHeight;
                 const btnW = noBtn.offsetWidth;
                 const btnH = noBtn.offsetHeight;
-                const padding = 20;
+                
+                const padding = 50;
 
                 const maxLeft = viewportW - btnW - padding;
                 const maxTop = viewportH - btnH - padding;
